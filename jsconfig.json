@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    // Each script runs on its own, so check each in its own scope.
+    "moduleDetection": "force",
+    "strict": true,
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "noEmit": true
+  },
+  "include": ["*/*.js", "lunaris.d.ts"]
+}

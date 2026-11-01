@@ -1,0 +1,60 @@
+[
+  {
+    "id": "comix",
+    "name": "Comix",
+    "lang": "en",
+    "kinds": [
+      "manga",
+      "manhwa",
+      "manhua"
+    ],
+    "version": "1.0.0",
+    "site": "https://comix.to",
+    "content": "mixed",
+    "script": "comix/comix.js",
+    "sha256": "c3b5b96c3593aa192351b8259c51862ae36977e27d26cf7a91e788ef64f0a381"
+  },
+  {
+    "id": "fenrirealm",
+    "name": "Fenrir Realm",
+    "lang": "en",
+    "kinds": [
+      "novel"
+    ],
+    "version": "1.0.0",
+    "site": "https://fenrirealm.com",
+    "content": "sfw",
+    "script": "fenrirealm/fenrirealm.js",
+    "sha256": "ac0e3e9eabd70def22e5f093650f9c25a682e3bf8a1a5ae5212683fd63663498"
+  },
+  {
+    "id": "mangakakalot",
+    "name": "Mangakakalot",
+    "lang": "en",
+    "kinds": [
+      "manga",
+      "manhwa",
+      "manhua"
+    ],
+    "version": "1.0.0",
+    "site": "https://www.mangakakalot.art",
+    "content": "mixed",
+    "script": "mangakakalot/mangakakalot.js",
+    "sha256": "5bc6a3a5cf156fa63c768894599734527578c32c70812350b710c79438551bdf"
+  },
+  {
+    "id": "manganato",
+    "name": "MangaNato",
+    "lang": "en",
+    "kinds": [
+      "manga",
+      "manhwa",
+      "manhua"
+    ],
+    "version": "1.0.0",
+    "site": "https://www.manganato.gg",
+    "content": "mixed",
+    "script": "manganato/manganato.js",
+    "sha256": "9c8cb652c2f95e9d48b6be765445c3af21d3147f60da2cfcea394fc2c4b82daf"
+  }
+]
