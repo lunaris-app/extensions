@@ -1,0 +1,35 @@
+name: publish
+
+# Rebuilds index.json and signs it on every push to main, so the app (which
+# pins this repo's public key in ext/sign.go) accepts the new index.
+# LUNARIS_SIGNING_KEY is the secret from `lunaris-ext keygen`.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Get lunaris-ext
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download --repo lunaris-app/sdk --pattern lunaris-ext-linux-amd64 --output lunaris-ext
+          chmod +x lunaris-ext
+      - name: Index and sign
+        env:
+          LUNARIS_SIGNING_KEY: ${{ secrets.LUNARIS_SIGNING_KEY }}
+        run: ./lunaris-ext index . && ./lunaris-ext sign .
+      # A push made with the workflow's own token doesn't start another run.
+      - name: Commit the signed index
+        run: |
+          git add index.json index.json.sig
+          git diff --cached --quiet && exit 0
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -m "chore: sign index"
+          git push

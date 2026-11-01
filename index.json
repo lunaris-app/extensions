@@ -1,5 +1,33 @@
 [
   {
+    "id": "asura-novels",
+    "name": "Asura Scans Novels",
+    "lang": "en",
+    "kinds": [
+      "novel"
+    ],
+    "version": "1.2.0",
+    "site": "https://asurascans.com/novels",
+    "content": "sfw",
+    "script": "asurascans/asura-novels.js",
+    "sha256": "eacd63909c7ad18670ac69834b1ef3a53d890bb9fc7eee418ec22618f1940752"
+  },
+  {
+    "id": "asura-scans",
+    "name": "Asura Scans",
+    "lang": "en",
+    "kinds": [
+      "manhwa",
+      "manhua",
+      "manga"
+    ],
+    "version": "1.5.0",
+    "site": "https://asurascans.com",
+    "content": "sfw",
+    "script": "asurascans/asura-scans.js",
+    "sha256": "bdac8f1bbbf68eeb36e36e34db147c831a7cc12552d8fc44d07c6ff047a21327"
+  },
+  {
     "id": "comix",
     "name": "Comix",
     "lang": "en",
@@ -15,6 +43,21 @@
     "sha256": "c3b5b96c3593aa192351b8259c51862ae36977e27d26cf7a91e788ef64f0a381"
   },
   {
+    "id": "demonic-scans",
+    "name": "Demonic Scans",
+    "lang": "en",
+    "kinds": [
+      "manhwa",
+      "manhua",
+      "manga"
+    ],
+    "version": "1.1.0",
+    "site": "https://demonicscans.org",
+    "content": "mixed",
+    "script": "demonicscans/demonic-scans.js",
+    "sha256": "4801343790ccea92636fdae475a828fea4b085f47d0181e6429b09d46e7cc583"
+  },
+  {
     "id": "fenrirealm",
     "name": "Fenrir Realm",
     "lang": "en",
@@ -26,6 +69,79 @@
     "content": "sfw",
     "script": "fenrirealm/fenrirealm.js",
     "sha256": "ac0e3e9eabd70def22e5f093650f9c25a682e3bf8a1a5ae5212683fd63663498"
+  },
+  {
+    "id": "flame-comics",
+    "name": "Flame Comics",
+    "lang": "en",
+    "kinds": [
+      "manhwa",
+      "manhua",
+      "manga"
+    ],
+    "version": "1.0.0",
+    "site": "https://flamecomics.xyz",
+    "content": "sfw",
+    "script": "flamecomics/flame-comics.js",
+    "sha256": "ebc1c81dfceb430cb6fd6283d3c49913aabb72ea91674f1d0cfde8560f2b9a21"
+  },
+  {
+    "id": "hentainexus",
+    "name": "HentaiNexus",
+    "lang": "en",
+    "kinds": [
+      "manga"
+    ],
+    "version": "1.0.0",
+    "site": "https://hentainexus.com",
+    "content": "nsfw",
+    "script": "hentainexus/hentainexus.js",
+    "sha256": "e55098f884c1c62e6263ace6516af27f5a8abd10c2b3f7d77c1d9228bdc0a2f5"
+  },
+  {
+    "id": "hiperdex",
+    "name": "HiperDEX",
+    "lang": "en",
+    "kinds": [
+      "manhwa",
+      "manhua",
+      "manga"
+    ],
+    "version": "1.0.0",
+    "site": "https://hiperdex.com",
+    "content": "nsfw",
+    "script": "hiperdex/hiperdex.js",
+    "sha256": "1afd68e6e0439a5c97bd6696fe8f9b7ad13861ab54192fc08aef047e0a907a70"
+  },
+  {
+    "id": "mangafire",
+    "name": "MangaFire",
+    "lang": "en",
+    "kinds": [
+      "manga",
+      "manhwa",
+      "manhua"
+    ],
+    "version": "1.0.0",
+    "site": "https://mangafire.to",
+    "content": "mixed",
+    "script": "mangafire/mangafire.js",
+    "sha256": "82cdaec33117fc51c6fe38207a965911165bc48cf863aac887fb813473127e69"
+  },
+  {
+    "id": "mangak",
+    "name": "Mangak",
+    "lang": "en",
+    "kinds": [
+      "manga",
+      "manhwa",
+      "manhua"
+    ],
+    "version": "1.1.0",
+    "site": "https://mangak.io",
+    "content": "mixed",
+    "script": "mangak/mangak.js",
+    "sha256": "3c4aed488dacd2ef4c9e8742f1352ecca0a761358c775afa90a99b6a2b28fe73"
   },
   {
     "id": "mangakakalot",
@@ -56,5 +172,18 @@
     "content": "mixed",
     "script": "manganato/manganato.js",
     "sha256": "9c8cb652c2f95e9d48b6be765445c3af21d3147f60da2cfcea394fc2c4b82daf"
+  },
+  {
+    "id": "niyaniya",
+    "name": "NiyaNiya",
+    "lang": "en",
+    "kinds": [
+      "manga"
+    ],
+    "version": "1.0.0",
+    "site": "https://niyaniya.moe",
+    "content": "nsfw",
+    "script": "niyaniya/niyaniya.js",
+    "sha256": "1391fd8991aed2d3158ed0c92ff66d6fd2660a777cc498c36432740ba7114a73"
   }
 ]
