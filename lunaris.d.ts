@@ -1,4 +1,4 @@
-// Types for Lunaris extensions, host API 2. Reference this file from your
+// Types for Lunaris extensions, host API 3. Reference this file from your
 // script for editor checks; see docs/writing-extensions.md.
 
 type Kind = "manga" | "manhwa" | "manhua" | "novel";
@@ -13,16 +13,27 @@ interface Info {
   kinds: Kind[];
   // Raise it on every release; the app offers an update when it changes.
   version: string;
-  // The host API this script was written for: 2 if it uses render() or the
-  // DOM names on Node, 1 otherwise.
-  api: 1 | 2;
+  // The host API this script was written for: 3 if it has settings, 2 if it
+  // uses render() or the DOM names on Node, 1 otherwise.
+  api: 1 | 2 | 3;
   // Whether the site is safe for work: "mixed" when it has some adult titles,
   // "nsfw" when they're most of it. Lunaris hides NSFW sources unless the
   // user turns them on.
   content: "sfw" | "mixed" | "nsfw";
   // The site it reads. Its icon becomes the extension's icon in Lunaris.
   site?: string;
+  // A short note shown beside the extension, e.g. that the site's terms
+  // forbid scraping. Up to 300 characters.
+  terms?: string;
+  // Options the user sets in Extensions; read them with setting(key) (API 3).
+  settings?: Setting[];
 }
+
+type Setting = { key: string; label: string } & (
+  | { type: "toggle"; default: boolean }
+  | { type: "select"; choices: { value: string; label: string }[]; default: string }
+  | { type: "text"; default: string }
+);
 
 interface Item {
   title: string;
@@ -32,6 +43,9 @@ interface Item {
   // Titles only. A kind not in info.kinds falls back to the first one there.
   kind?: Kind;
   author?: string;
+  // Chapters only. When it was published, as ISO 8601 ("2026-11-05" or
+  // "2026-11-05T14:30:00Z"). Lunaris shows no date for anything else.
+  date?: string;
 }
 
 interface Details {
@@ -125,3 +139,8 @@ declare function fetch(url: string, options?: FetchOptions): FetchResponse;
 declare function render(url: string, options?: RenderOptions): string;
 
 declare function html(text: string): Node;
+
+// Host API 3. The user's choice for one of info.settings, or its default:
+// a boolean for toggles, a string otherwise. null for a key info doesn't
+// list, and at the script's top level, outside the functions.
+declare function setting(key: string): boolean | string | null;

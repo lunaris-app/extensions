@@ -23,7 +23,7 @@ extension({
     name: "Demonic Scans",
     lang: "en",
     kinds: ["manhwa", "manhua", "manga"],
-    version: "1.1.0",
+    version: "1.2.0",
     api: 1,
     content: "mixed",
     site: BASE,
@@ -56,7 +56,11 @@ extension({
       .select("#chapters-list a.chplinks")
       .map((a) => {
         const n = a.attr("href").match(/chapter=([\d.]+)/)?.[1];
-        return { title: n ? `Chapter ${n}` : a.attr("title"), url: abs(a.attr("href")) };
+        return {
+          title: n ? `Chapter ${n}` : a.attr("title"),
+          url: abs(a.attr("href")),
+          date: a.select("span")[0]?.text().trim(),
+        };
       });
   },
 

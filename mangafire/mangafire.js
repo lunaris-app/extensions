@@ -81,7 +81,7 @@ extension({
     name: "MangaFire",
     lang: "en",
     kinds: ["manga", "manhwa", "manhua"],
-    version: "1.0.0",
+    version: "1.1.0",
     api: 2,
     content: "mixed",
     site: BASE,
@@ -110,7 +110,7 @@ extension({
 
   chapters(url) {
     const path = pathOf(url);
-    /** @type {{ id: number, number: number, name: string, type: string }[]} */
+    /** @type {{ id: number, number: number, name: string, type: string, createdAt?: number }[]} */
     const items = JSON.parse(render(BASE + path, { script: `(${allChapters})(${until})` }));
     const seen = new Set();
     return items
@@ -119,6 +119,7 @@ extension({
         // A chapter can come from several groups; the site badges the official one.
         title: `Chapter ${c.number}${c.name ? `: ${c.name}` : ""}${c.type === "official" ? " (official)" : ""}`,
         url: `${BASE}${path}/chapter/${c.id}`,
+        date: c.createdAt ? new Date(c.createdAt * 1000).toISOString() : undefined,
       }));
   },
 

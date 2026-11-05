@@ -43,7 +43,7 @@ extension({
     name: NAME,
     lang: "en",
     kinds: ["manga", "manhwa", "manhua"],
-    version: "1.0.0",
+    version: "1.1.0",
     api: 1,
     content: "mixed",
     site: BASE,
@@ -79,7 +79,7 @@ extension({
 
   chapters(url) {
     const slug = slugOf(url);
-    /** @type {{ chapter_name: string, chapter_slug: string }[]} */
+    /** @type {{ chapter_name: string, chapter_slug: string, updated_at?: string }[]} */
     const all = [];
     // The API pages its answer; 500 a request keeps even the longest series to a few.
     for (let offset = 0; ; offset += 500) {
@@ -91,6 +91,7 @@ extension({
     return all.map((c) => ({
       title: c.chapter_name,
       url: `${BASE}/manga/${slug}/${c.chapter_slug}`,
+      date: c.updated_at,
     }));
   },
 

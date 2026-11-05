@@ -25,7 +25,7 @@ extension({
     name: "Flame Comics",
     lang: "en",
     kinds: ["manhwa", "manhua", "manga"],
-    version: "1.0.0",
+    version: "1.1.0",
     api: 1,
     content: "sfw",
     site: BASE,
@@ -47,12 +47,13 @@ extension({
   },
 
   chapters(url) {
-    /** @type {{ series_id: number, chapter: string, title: string | null, token: string }[]} */
+    /** @type {{ series_id: number, chapter: string, title: string | null, token: string, release_date?: number }[]} */
     const chapters = pageProps(url).chapters;
     return chapters.map((c) => ({
       // "12.00" → "12", "12.50" → "12.5"
       title: `Chapter ${Number(c.chapter)}${c.title ? `: ${c.title}` : ""}`,
       url: `${BASE}/series/${c.series_id}/${c.token}`,
+      date: c.release_date ? new Date(c.release_date * 1000).toISOString() : undefined,
     }));
   },
 
