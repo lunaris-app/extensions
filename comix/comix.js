@@ -9,6 +9,18 @@ const BASE = "https://comix.to";
 /** @param {string} url */
 const pathOf = (url) => url.replace(/^https?:\/\/[^/]+/, "").replace(/[?#].*$/, "");
 
+// The site only says "12h ago", "1w ago" or "11mos ago". Counting from the start of the
+// current unit keeps the answer the same across refreshes, so saved chapters don't change.
+/** @param {string} text */
+function fromAgo(text) {
+  const m = text.trim().match(/^(\d+)\s*(mo|[a-z])[a-z]*\s+ago$/i);
+  /** @type {Record<string, number>} */
+  const units = { s: 1e3, m: 6e4, h: 36e5, d: 864e5, w: 6048e5, mo: 2592e6, y: 31536e6 };
+  const unit = m && units[m[2].toLowerCase()];
+  if (!m || !unit) return undefined;
+  return new Date((Math.floor(Date.now() / unit) - Number(m[1])) * unit).toISOString();
+}
+
 // The functions below run inside the page (render's script), not in the extension:
 // they can't see anything else in this file, so until is passed in.
 
@@ -68,6 +80,7 @@ async function allChapters(wait) {
       ch: row.querySelector(".mchap-row__ch")?.textContent?.trim() ?? "",
       name: row.querySelector(".mchap-row__title")?.textContent?.trim() ?? "",
       group: row.querySelector(".mchap-row__group")?.textContent?.trim() ?? "",
+      time: row.querySelector(".mchap-row__time")?.textContent?.trim() ?? "",
     }));
   const first = await wait(() => document.querySelector(".mchap-row, .uempty"), "the chapter list");
   if (!first.matches(".mchap-row")) return [];
@@ -88,7 +101,7 @@ async function allChapters(wait) {
   if (query && "limit" in (query.options.queryKey?.[3] ?? {})) {
     // A failed fetch leaves the query stuck, so fail fast instead of retrying.
     query.options.retry = false;
-    /** @type {{ href: string, ch: string, name: string, group: string }[]} */
+    /** @type {{ href: string, ch: string, name: string, group: string, time: string }[]} */
     const all = [];
     /** @type {string | undefined} */
     let nameKey;
@@ -112,6 +125,7 @@ async function allChapters(wait) {
           ch: `Ch.${href.match(/-chapter-([\d.]+)$/)?.[1] ?? ""}`,
           name: (nameKey && typeof item[nameKey] === "string" && item[nameKey]) || "",
           group: (nameKey && typeof group[nameKey] === "string" && group[nameKey]) || "",
+          time: values.find((v) => typeof v === "string" && /^\d+\s*[a-z]+ ago$/i.test(v)) ?? "",
         });
       }
       if (items.length < 100) return all;
@@ -169,7 +183,7 @@ extension({
     name: "Comix",
     lang: "en",
     kinds: ["manga", "manhwa", "manhua"],
-    version: "1.0.0",
+    version: "1.1.0",
     api: 2,
     content: "mixed",
     site: BASE,
@@ -194,7 +208,7 @@ extension({
   },
 
   chapters(url) {
-    /** @type {{ href: string, ch: string, name: string, group: string }[]} */
+    /** @type {{ href: string, ch: string, name: string, group: string, time: string }[]} */
     const rows = JSON.parse(render(BASE + pathOf(url), { script: `(${allChapters})(${until})` }));
     const seen = new Set();
     return rows
@@ -204,6 +218,7 @@ extension({
         return {
           title: `${number}${r.name ? `: ${r.name}` : ""}${r.group ? ` (${r.group})` : ""}`,
           url: BASE + r.href,
+          date: fromAgo(r.time),
         };
       });
   },

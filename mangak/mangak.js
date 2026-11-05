@@ -32,7 +32,7 @@ extension({
     name: "Mangak",
     lang: "en",
     kinds: ["manga", "manhwa", "manhua"],
-    version: "1.1.0",
+    version: "1.2.0",
     api: 1,
     content: "mixed",
     site: BASE,
@@ -54,11 +54,12 @@ extension({
 
   chapters(url) {
     const id = ids(url).title;
-    /** @type {{ chapters: { id: string, slug: string, name: string }[] }} */
+    /** @type {{ chapters: { id: string, slug: string, name: string, updated_at?: string }[] }} */
     const data = api(`/titles/${id}/chapters`);
     return data.chapters.map((c) => ({
       title: c.name,
       url: `${url.replace(/\/$/, "")}/${c.id}-${c.slug}`,
+      date: c.updated_at,
     }));
   },
 

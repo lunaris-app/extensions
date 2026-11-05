@@ -23,7 +23,7 @@ extension({
     name: "Asura Scans Novels",
     lang: "en",
     kinds: ["novel"],
-    version: "1.2.0",
+    version: "1.3.0",
     api: 1,
     content: "sfw",
     site: "https://asurascans.com/novels",
@@ -44,7 +44,7 @@ extension({
   },
 
   chapters(url) {
-    /** @type {{ series: { title: string }, chapters: { number: number, title?: string, is_locked: boolean }[] }} */
+    /** @type {{ series: { title: string }, chapters: { number: number, title?: string, is_locked: boolean, published_at?: string }[] }} */
     const novel = get(url);
     // Locked chapters cost shards: leave them out. The API lists oldest first.
     return novel.chapters
@@ -54,6 +54,7 @@ extension({
         // Many chapters are titled with the novel's own name; that adds nothing.
         title: `Chapter ${c.number}${c.title && c.title !== novel.series.title ? `: ${c.title}` : ""}`,
         url: `${url}/chapter/${c.number}`,
+        date: c.published_at,
       }));
   },
 

@@ -26,7 +26,7 @@ extension({
     name: "Asura Scans",
     lang: "en",
     kinds: ["manhwa", "manhua", "manga"],
-    version: "1.5.0",
+    version: "1.6.0",
     api: 1,
     content: "sfw",
     site: "https://asurascans.com",
@@ -47,13 +47,14 @@ extension({
   },
 
   chapters(url) {
-    /** @type {{ number: number, title?: string, is_premium: boolean, early_access_until?: string }[]} */
+    /** @type {{ number: number, title?: string, is_premium: boolean, early_access_until?: string, published_at?: string }[]} */
     const chapters = get(url);
     return chapters
       .filter((c) => !locked(c))
       .map((c) => ({
         title: `Chapter ${c.number}${c.title ? `: ${c.title}` : ""}`,
         url: `${url}/${c.number}`,
+        date: c.published_at,
       }));
   },
 

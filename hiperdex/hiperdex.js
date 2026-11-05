@@ -15,6 +15,18 @@ const pathOf = (url) => url.replace(/^https?:\/\/[^/]+/, "");
 /** @param {string} href */
 const abs = (href) => (/^https?:/.test(href) ? href : BASE + href);
 
+// The site only says "12h ago", "1w ago" or "11mos ago". Counting from the start of the
+// current unit keeps the answer the same across refreshes, so saved chapters don't change.
+/** @param {string} text */
+function fromAgo(text) {
+  const m = text.trim().match(/^(\d+)\s*(mo|[a-z])[a-z]*\s+ago$/i);
+  /** @type {Record<string, number>} */
+  const units = { s: 1e3, m: 6e4, h: 36e5, d: 864e5, w: 6048e5, mo: 2592e6, y: 31536e6 };
+  const unit = m && units[m[2].toLowerCase()];
+  if (!m || !unit) return undefined;
+  return new Date((Math.floor(Date.now() / unit) - Number(m[1])) * unit).toISOString();
+}
+
 /** @param {Node} doc @param {string} param the search filter the links set, e.g. "genre" */
 const filterLinks = (doc, param) =>
   doc.querySelectorAll(`a[href*="${param}="]`).map((a) => a.text());
@@ -25,7 +37,7 @@ extension({
     name: "HiperDEX",
     lang: "en",
     kinds: ["manhwa", "manhua", "manga"],
-    version: "1.0.0",
+    version: "1.1.0",
     api: 2,
     content: "nsfw",
     site: BASE,
@@ -52,9 +64,16 @@ extension({
   chapters(url) {
     const path = pathOf(url);
     // The page lists every chapter, newest first, each linking to /manga/<slug>/<number>.
-    return page(path, `a[href^="${path}/"]`)
-      .querySelectorAll(`a[href^="${path}/"]`)
-      .map((a) => ({ title: a.text(), url: abs(a.attr("href")) }));
+    const link = `a[href^="${path}/"]`;
+    const doc = page(path, link);
+    const links = doc.querySelectorAll(link);
+    const times = doc.querySelectorAll(`${link} + div span:last-child`);
+    return links.map((a, i) => ({
+      title: a.text(),
+      url: abs(a.attr("href")),
+      // Only when every row has one, or dates would land on the wrong chapters.
+      date: times.length === links.length ? fromAgo(times[i].text()) : undefined,
+    }));
   },
 
   details(url) {

@@ -58,7 +58,7 @@ extension({
     name: "Fenrir Realm",
     lang: "en",
     kinds: ["novel"],
-    version: "1.0.0",
+    version: "1.1.0",
     api: 2,
     content: "sfw",
     site: BASE,
@@ -79,7 +79,7 @@ extension({
 
   chapters(url) {
     const slug = slugOf(url);
-    /** @type {{ slug: string, name: string, title: string | null, locked?: { price: number, unlocked_at: string | null } }[]} */
+    /** @type {{ slug: string, name: string, title: string | null, created_at?: string, locked?: { price: number, unlocked_at: string | null } }[]} */
     const list = api(`/series/${slug}/chapters`);
     const now = Date.now();
     return (
@@ -103,6 +103,7 @@ extension({
                   ? title
                   : `${name}: ${title}`,
             url: `${BASE}/series/${slug}/${c.slug}`,
+            date: c.created_at,
           };
         })
         // The API lists oldest first.
