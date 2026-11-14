@@ -58,6 +58,21 @@
     "sha256": "d50035513bb69c7bce412a56036bdb958f4260c55792d6cb7a179b06eeb4cfe6"
   },
   {
+    "id": "erisscans",
+    "name": "Eris Scans",
+    "lang": "en",
+    "kinds": [
+      "manhwa",
+      "manhua",
+      "manga"
+    ],
+    "version": "1.0.0",
+    "site": "https://erisscans.com",
+    "content": "mixed",
+    "script": "erisscans/erisscans.js",
+    "sha256": "04d12a1176892f5b9e55625a2a00387a3a655bd685e5d98abcfe0f9cc6233540"
+  },
+  {
     "id": "fenrirealm",
     "name": "Fenrir Realm",
     "lang": "en",

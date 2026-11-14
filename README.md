@@ -9,6 +9,7 @@ the project. Lunaris lists it under **Extensions > Available**, so there's nothi
 | Asura Scans Novels | [asurascans.com/novels](https://asurascans.com/novels) | novel                 |                                                                                                     |
 | Comix              | [comix.to](https://comix.to)                           | manga, manhwa, manhua | Uses `render` (API 2): the site signs and encrypts its API calls                                    |
 | Demonic Scans      | [demonicscans.org](https://demonicscans.org)           | manhwa, manhua, manga | Some adult titles                                                                                   |
+| Eris Scans         | [erisscans.com](https://erisscans.com)                 | manhwa, manhua, manga | Some adult titles; search loads the whole catalogue; locked chapters are left out                   |
 | Fenrir Realm       | [fenrirealm.com](https://fenrirealm.com)               | novel                 | Chapter text needs a "confirm you're human" check in the Lunaris window; paid chapters are left out |
 | Flame Comics       | [flamecomics.xyz](https://flamecomics.xyz)             | manhwa, manhua, manga |                                                                                                     |
 | HentaiNexus        | [hentainexus.com](https://hentainexus.com)             | manga                 | Adult                                                                                               |
