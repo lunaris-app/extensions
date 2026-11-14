@@ -6,11 +6,13 @@
 
 const BASE = "https://keroscans.net";
 
+// Runs in the page. Next.js empties self.__next_f once it hydrates, so read the payload
+// from the inline scripts that pushed it.
+const PAYLOAD = String.raw`[...document.querySelectorAll("script:not([src])")].flatMap((s) => [...s.textContent.matchAll(/self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)/g)].map((m) => JSON.parse(m[1]))).join("")`;
+
 /** The page at path's flight payload, joined into one string. @param {string} path */
 function payload(path) {
-  const s = render(BASE + path, {
-    script: "(self.__next_f || []).filter((e) => e[0] === 1).map((e) => e[1]).join('')",
-  });
+  const s = render(BASE + path, { script: PAYLOAD });
   if (!s) throw new Error("KeroScans: the page changed (no payload)");
   return s;
 }
@@ -67,7 +69,7 @@ extension({
     name: "KeroScans",
     lang: "en",
     kinds: ["manga", "manhwa", "manhua"],
-    version: "1.0.0",
+    version: "1.0.1",
     api: 2,
     content: "mixed",
     site: BASE,

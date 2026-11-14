@@ -137,11 +137,11 @@
       "manhwa",
       "manhua"
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "site": "https://keroscans.net",
     "content": "mixed",
     "script": "keroscans/keroscans.js",
-    "sha256": "d2ac66443c02235cde30c7a9d41e068be387326fd107caa4d8b905639d764781"
+    "sha256": "4d12d32630635a14b2f07aeda4b46782b71d2f9afd77263b1759ccf3a7ac8b6d"
   },
   {
     "id": "madarascans",
