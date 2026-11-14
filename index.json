@@ -189,6 +189,21 @@
     "sha256": "8d9a763ce5f84965a381047831a757157b5078b3395eb09716f564f639bee6f6"
   },
   {
+    "id": "manhwatoon",
+    "name": "ManhwaToon",
+    "lang": "en",
+    "kinds": [
+      "manhwa",
+      "manhua",
+      "manga"
+    ],
+    "version": "1.0.0",
+    "site": "https://www.manhwatoon.me",
+    "content": "nsfw",
+    "script": "manhwatoon/manhwatoon.js",
+    "sha256": "31adca8618cd1b36f8d9ac5bbcb7c6025116858098073c2bdafbf00aa5c8c2ee"
+  },
+  {
     "id": "niyaniya",
     "name": "NiyaNiya",
     "lang": "en",
