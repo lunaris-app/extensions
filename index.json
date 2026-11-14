@@ -114,6 +114,21 @@
     "sha256": "fbceebfe7f6cdfdf2991486095aea00ee702b290e3510c3491489cc21c7434dc"
   },
   {
+    "id": "madarascans",
+    "name": "Madara Scans",
+    "lang": "en",
+    "kinds": [
+      "manhwa",
+      "manhua",
+      "manga"
+    ],
+    "version": "1.0.0",
+    "site": "https://madarascans.net",
+    "content": "sfw",
+    "script": "madarascans/madarascans.js",
+    "sha256": "f57e5b2bb4172f13cb29a5ce7dddd80dfd6d0a9f56d2d3e1dfad7966f6c6c6f5"
+  },
+  {
     "id": "mangadex",
     "name": "MangaDex",
     "lang": "en",
