@@ -27,6 +27,44 @@ the project. Lunaris lists it under **Extensions > Available**, so there's nothi
 | Paradise Scans     | [paradisescans.com](https://paradisescans.com)         | manhwa, novel         | BL; some adult titles; premium chapters are left out                                                |
 | Vortex Scans       | [vortexscans.org](https://vortexscans.org)             | manhwa, manhua, manga | Locked chapters are left out                                                                        |
 
+## Installing
+
+The repo's link is:
+
+```
+https://raw.githubusercontent.com/lunaris-app/extensions/main/index.json
+```
+
+Lunaris lists it already as **Lunaris extensions**, so you don't need to add it.
+
+1. In Lunaris, open **Extensions** and switch to the **Available** tab.
+2. Under **Lunaris extensions**, click **Install** beside the ones you want.
+3. Find titles in **Browse**, or switch an extension off in the **Installed** tab without
+   removing it.
+
+Sources whose Notes start with "Adult" stay out of **Available** until you turn on
+**Settings > Sources > Show NSFW extensions**. Ones with "some adult titles" always show.
+
+### Human checks
+
+Some sites ask you to prove you're human (see Notes). When one does, Lunaris shows a banner,
+or the site's page in its own window: pass the check there and reading carries on. To pass
+or refresh a check ahead of time, use the globe button beside the extension in the
+**Installed** tab.
+
+### Updates
+
+When a script changes, **Available** shows **Update from v…** beside it, and an **Update all**
+button at the top. Your library, history and downloads are kept.
+
+### Other repos and single scripts
+
+- **Add a repo** at the bottom of **Available** takes another repo's `index.json` URL. It
+  must be signed, with `index.json.sig` beside it. Nobody reviews other repos' scripts, so
+  only add one you trust.
+- **Import script** at the top of **Extensions** installs a single `.js` file, such as one
+  you're writing.
+
 ## Working on them
 
 `lunaris.d.ts` and `jsconfig.json` come from the [SDK](https://github.com/lunaris-app/sdk).
