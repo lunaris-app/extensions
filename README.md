@@ -23,6 +23,7 @@ the project. Lunaris lists it under **Extensions > Available**, so there's nothi
 | ManhwaToon         | [manhwatoon.me](https://www.manhwatoon.me)             | manhwa, manhua, manga | Adult; pages use `render` (API 2): plain requests get decoy images                                  |
 | NiyaNiya           | [niyaniya.moe](https://niyaniya.moe)                   | manga                 | Adult                                                                                               |
 | Omega Scans        | [omegascans.org](https://omegascans.org)               | manhwa                | Adult; comics only; paid chapters are left out                                                      |
+| Paradise Scans     | [paradisescans.com](https://paradisescans.com)         | manhwa, novel         | BL; some adult titles; premium chapters are left out                                                |
 | Vortex Scans       | [vortexscans.org](https://vortexscans.org)             | manhwa, manhua, manga | Locked chapters are left out                                                                        |
 
 ## Working on them

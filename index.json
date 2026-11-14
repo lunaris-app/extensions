@@ -260,6 +260,20 @@
     "sha256": "d5883d7a59c1c7b1e20ff7c4a28fa70dd25c05c1e1401ed1682d89ae26d9c98e"
   },
   {
+    "id": "paradisescans",
+    "name": "Paradise Scans",
+    "lang": "en",
+    "kinds": [
+      "manhwa",
+      "novel"
+    ],
+    "version": "1.0.0",
+    "site": "https://paradisescans.com",
+    "content": "mixed",
+    "script": "paradisescans/paradisescans.js",
+    "sha256": "2b77e7ca5f39b8005c3dab44b24a98fea9e5cef741aa5b8aeb0ff537bd241eab"
+  },
+  {
     "id": "vortexscans",
     "name": "Vortex Scans",
     "lang": "en",
