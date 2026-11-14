@@ -13,6 +13,7 @@ the project. Lunaris lists it under **Extensions > Available**, so there's nothi
 | Flame Comics       | [flamecomics.xyz](https://flamecomics.xyz)             | manhwa, manhua, manga |                                                                                                     |
 | HentaiNexus        | [hentainexus.com](https://hentainexus.com)             | manga                 | Adult                                                                                               |
 | HiperDEX           | [hiperdex.com](https://hiperdex.com)                   | manhwa, manhua, manga | Adult                                                                                               |
+| KeroScans          | [keroscans.net](https://keroscans.net)                 | manga, manhwa, manhua | Uses `render` (API 2): the site turns away non-browser requests; locked chapters are left out       |
 | Madara Scans       | [madarascans.net](https://madarascans.net)             | manhwa, manhua, manga | Locked chapters are left out                                                                        |
 | MangaDex           | [mangadex.org](https://mangadex.org)                   | manga, manhwa, manhua | English only; chapters that only link out (MangaPlus) are left out                                  |
 | MangaFire          | [mangafire.to](https://mangafire.to)                   | manga, manhwa, manhua | Some adult titles                                                                                   |

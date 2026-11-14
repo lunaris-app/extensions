@@ -114,6 +114,21 @@
     "sha256": "fbceebfe7f6cdfdf2991486095aea00ee702b290e3510c3491489cc21c7434dc"
   },
   {
+    "id": "keroscans",
+    "name": "KeroScans",
+    "lang": "en",
+    "kinds": [
+      "manga",
+      "manhwa",
+      "manhua"
+    ],
+    "version": "1.0.0",
+    "site": "https://keroscans.net",
+    "content": "mixed",
+    "script": "keroscans/keroscans.js",
+    "sha256": "d2ac66443c02235cde30c7a9d41e068be387326fd107caa4d8b905639d764781"
+  },
+  {
     "id": "madarascans",
     "name": "Madara Scans",
     "lang": "en",
