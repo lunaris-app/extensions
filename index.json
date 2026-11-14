@@ -58,6 +58,21 @@
     "sha256": "d50035513bb69c7bce412a56036bdb958f4260c55792d6cb7a179b06eeb4cfe6"
   },
   {
+    "id": "erisscans",
+    "name": "Eris Scans",
+    "lang": "en",
+    "kinds": [
+      "manhwa",
+      "manhua",
+      "manga"
+    ],
+    "version": "1.0.0",
+    "site": "https://erisscans.com",
+    "content": "mixed",
+    "script": "erisscans/erisscans.js",
+    "sha256": "04d12a1176892f5b9e55625a2a00387a3a655bd685e5d98abcfe0f9cc6233540"
+  },
+  {
     "id": "fenrirealm",
     "name": "Fenrir Realm",
     "lang": "en",
@@ -112,6 +127,51 @@
     "content": "nsfw",
     "script": "hiperdex/hiperdex.js",
     "sha256": "fbceebfe7f6cdfdf2991486095aea00ee702b290e3510c3491489cc21c7434dc"
+  },
+  {
+    "id": "keroscans",
+    "name": "KeroScans",
+    "lang": "en",
+    "kinds": [
+      "manga",
+      "manhwa",
+      "manhua"
+    ],
+    "version": "1.0.0",
+    "site": "https://keroscans.net",
+    "content": "mixed",
+    "script": "keroscans/keroscans.js",
+    "sha256": "d2ac66443c02235cde30c7a9d41e068be387326fd107caa4d8b905639d764781"
+  },
+  {
+    "id": "madarascans",
+    "name": "Madara Scans",
+    "lang": "en",
+    "kinds": [
+      "manhwa",
+      "manhua",
+      "manga"
+    ],
+    "version": "1.0.0",
+    "site": "https://madarascans.net",
+    "content": "sfw",
+    "script": "madarascans/madarascans.js",
+    "sha256": "f57e5b2bb4172f13cb29a5ce7dddd80dfd6d0a9f56d2d3e1dfad7966f6c6c6f5"
+  },
+  {
+    "id": "mangadex",
+    "name": "MangaDex",
+    "lang": "en",
+    "kinds": [
+      "manga",
+      "manhwa",
+      "manhua"
+    ],
+    "version": "1.0.0",
+    "site": "https://mangadex.org",
+    "content": "mixed",
+    "script": "mangadex/mangadex.js",
+    "sha256": "23c8f6d5fe3cbb1fd31c60e068790a92bff4c942b0c449a8b4ebf1c7c91a054e"
   },
   {
     "id": "mangafire",
@@ -174,6 +234,21 @@
     "sha256": "8d9a763ce5f84965a381047831a757157b5078b3395eb09716f564f639bee6f6"
   },
   {
+    "id": "manhwatoon",
+    "name": "ManhwaToon",
+    "lang": "en",
+    "kinds": [
+      "manhwa",
+      "manhua",
+      "manga"
+    ],
+    "version": "1.0.0",
+    "site": "https://www.manhwatoon.me",
+    "content": "nsfw",
+    "script": "manhwatoon/manhwatoon.js",
+    "sha256": "31adca8618cd1b36f8d9ac5bbcb7c6025116858098073c2bdafbf00aa5c8c2ee"
+  },
+  {
     "id": "niyaniya",
     "name": "NiyaNiya",
     "lang": "en",
@@ -185,5 +260,47 @@
     "content": "nsfw",
     "script": "niyaniya/niyaniya.js",
     "sha256": "1391fd8991aed2d3158ed0c92ff66d6fd2660a777cc498c36432740ba7114a73"
+  },
+  {
+    "id": "omegascans",
+    "name": "Omega Scans",
+    "lang": "en",
+    "kinds": [
+      "manhwa"
+    ],
+    "version": "1.0.0",
+    "site": "https://omegascans.org",
+    "content": "nsfw",
+    "script": "omegascans/omegascans.js",
+    "sha256": "d5883d7a59c1c7b1e20ff7c4a28fa70dd25c05c1e1401ed1682d89ae26d9c98e"
+  },
+  {
+    "id": "paradisescans",
+    "name": "Paradise Scans",
+    "lang": "en",
+    "kinds": [
+      "manhwa",
+      "novel"
+    ],
+    "version": "1.0.0",
+    "site": "https://paradisescans.com",
+    "content": "mixed",
+    "script": "paradisescans/paradisescans.js",
+    "sha256": "2b77e7ca5f39b8005c3dab44b24a98fea9e5cef741aa5b8aeb0ff537bd241eab"
+  },
+  {
+    "id": "vortexscans",
+    "name": "Vortex Scans",
+    "lang": "en",
+    "kinds": [
+      "manhwa",
+      "manhua",
+      "manga"
+    ],
+    "version": "1.0.0",
+    "site": "https://vortexscans.org",
+    "content": "sfw",
+    "script": "vortexscans/vortexscans.js",
+    "sha256": "f4856ddfa0955a0dbc9c27c11ea57bd3b13377e6b6ef0e951fb0fac7ebb01def"
   }
 ]

@@ -9,15 +9,23 @@ the project. Lunaris lists it under **Extensions > Available**, so there's nothi
 | Asura Scans Novels | [asurascans.com/novels](https://asurascans.com/novels) | novel                 |                                                                                                     |
 | Comix              | [comix.to](https://comix.to)                           | manga, manhwa, manhua | Uses `render` (API 2): the site signs and encrypts its API calls                                    |
 | Demonic Scans      | [demonicscans.org](https://demonicscans.org)           | manhwa, manhua, manga | Some adult titles                                                                                   |
+| Eris Scans         | [erisscans.com](https://erisscans.com)                 | manhwa, manhua, manga | Some adult titles; search loads the whole catalogue; locked chapters are left out                   |
 | Fenrir Realm       | [fenrirealm.com](https://fenrirealm.com)               | novel                 | Chapter text needs a "confirm you're human" check in the Lunaris window; paid chapters are left out |
 | Flame Comics       | [flamecomics.xyz](https://flamecomics.xyz)             | manhwa, manhua, manga |                                                                                                     |
 | HentaiNexus        | [hentainexus.com](https://hentainexus.com)             | manga                 | Adult                                                                                               |
 | HiperDEX           | [hiperdex.com](https://hiperdex.com)                   | manhwa, manhua, manga | Adult                                                                                               |
+| KeroScans          | [keroscans.net](https://keroscans.net)                 | manga, manhwa, manhua | Uses `render` (API 2): the site turns away non-browser requests; locked chapters are left out       |
+| Madara Scans       | [madarascans.net](https://madarascans.net)             | manhwa, manhua, manga | Locked chapters are left out                                                                        |
+| MangaDex           | [mangadex.org](https://mangadex.org)                   | manga, manhwa, manhua | English only; chapters that only link out (MangaPlus) are left out                                  |
 | MangaFire          | [mangafire.to](https://mangafire.to)                   | manga, manhwa, manhua | Some adult titles                                                                                   |
 | Mangak             | [mangak.io](https://mangak.io)                         | manga, manhwa, manhua | Some adult titles                                                                                   |
 | Mangakakalot       | [mangakakalot.art](https://www.mangakakalot.art)       | manga, manhwa, manhua | Same platform as MangaNato                                                                          |
 | MangaNato          | [manganato.gg](https://www.manganato.gg)               | manga, manhwa, manhua | Search may show a Cloudflare check; search returns one page of results                              |
+| ManhwaToon         | [manhwatoon.me](https://www.manhwatoon.me)             | manhwa, manhua, manga | Adult; pages use `render` (API 2): plain requests get decoy images                                  |
 | NiyaNiya           | [niyaniya.moe](https://niyaniya.moe)                   | manga                 | Adult                                                                                               |
+| Omega Scans        | [omegascans.org](https://omegascans.org)               | manhwa                | Adult; comics only; paid chapters are left out                                                      |
+| Paradise Scans     | [paradisescans.com](https://paradisescans.com)         | manhwa, novel         | BL; some adult titles; premium chapters are left out                                                |
+| Vortex Scans       | [vortexscans.org](https://vortexscans.org)             | manhwa, manhua, manga | Locked chapters are left out                                                                        |
 
 ## Working on them
 
