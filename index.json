@@ -114,6 +114,21 @@
     "sha256": "fbceebfe7f6cdfdf2991486095aea00ee702b290e3510c3491489cc21c7434dc"
   },
   {
+    "id": "mangadex",
+    "name": "MangaDex",
+    "lang": "en",
+    "kinds": [
+      "manga",
+      "manhwa",
+      "manhua"
+    ],
+    "version": "1.0.0",
+    "site": "https://mangadex.org",
+    "content": "mixed",
+    "script": "mangadex/mangadex.js",
+    "sha256": "23c8f6d5fe3cbb1fd31c60e068790a92bff4c942b0c449a8b4ebf1c7c91a054e"
+  },
+  {
     "id": "mangafire",
     "name": "MangaFire",
     "lang": "en",

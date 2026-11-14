@@ -13,6 +13,7 @@ the project. Lunaris lists it under **Extensions > Available**, so there's nothi
 | Flame Comics       | [flamecomics.xyz](https://flamecomics.xyz)             | manhwa, manhua, manga |                                                                                                     |
 | HentaiNexus        | [hentainexus.com](https://hentainexus.com)             | manga                 | Adult                                                                                               |
 | HiperDEX           | [hiperdex.com](https://hiperdex.com)                   | manhwa, manhua, manga | Adult                                                                                               |
+| MangaDex           | [mangadex.org](https://mangadex.org)                   | manga, manhwa, manhua | English only; chapters that only link out (MangaPlus) are left out                                  |
 | MangaFire          | [mangafire.to](https://mangafire.to)                   | manga, manhwa, manhua | Some adult titles                                                                                   |
 | Mangak             | [mangak.io](https://mangak.io)                         | manga, manhwa, manhua | Some adult titles                                                                                   |
 | Mangakakalot       | [mangakakalot.art](https://www.mangakakalot.art)       | manga, manhwa, manhua | Same platform as MangaNato                                                                          |
