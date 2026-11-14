@@ -21,6 +21,7 @@ the project. Lunaris lists it under **Extensions > Available**, so there's nothi
 | MangaNato          | [manganato.gg](https://www.manganato.gg)               | manga, manhwa, manhua | Search may show a Cloudflare check; search returns one page of results                              |
 | ManhwaToon         | [manhwatoon.me](https://www.manhwatoon.me)             | manhwa, manhua, manga | Adult; pages use `render` (API 2): plain requests get decoy images                                  |
 | NiyaNiya           | [niyaniya.moe](https://niyaniya.moe)                   | manga                 | Adult                                                                                               |
+| Vortex Scans       | [vortexscans.org](https://vortexscans.org)             | manhwa, manhua, manga | Locked chapters are left out                                                                        |
 
 ## Working on them
 

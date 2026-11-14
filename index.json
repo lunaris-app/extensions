@@ -230,5 +230,20 @@
     "content": "nsfw",
     "script": "niyaniya/niyaniya.js",
     "sha256": "1391fd8991aed2d3158ed0c92ff66d6fd2660a777cc498c36432740ba7114a73"
+  },
+  {
+    "id": "vortexscans",
+    "name": "Vortex Scans",
+    "lang": "en",
+    "kinds": [
+      "manhwa",
+      "manhua",
+      "manga"
+    ],
+    "version": "1.0.0",
+    "site": "https://vortexscans.org",
+    "content": "sfw",
+    "script": "vortexscans/vortexscans.js",
+    "sha256": "f4856ddfa0955a0dbc9c27c11ea57bd3b13377e6b6ef0e951fb0fac7ebb01def"
   }
 ]
