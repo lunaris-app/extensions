@@ -232,6 +232,19 @@
     "sha256": "1391fd8991aed2d3158ed0c92ff66d6fd2660a777cc498c36432740ba7114a73"
   },
   {
+    "id": "omegascans",
+    "name": "Omega Scans",
+    "lang": "en",
+    "kinds": [
+      "manhwa"
+    ],
+    "version": "1.0.0",
+    "site": "https://omegascans.org",
+    "content": "nsfw",
+    "script": "omegascans/omegascans.js",
+    "sha256": "d5883d7a59c1c7b1e20ff7c4a28fa70dd25c05c1e1401ed1682d89ae26d9c98e"
+  },
+  {
     "id": "vortexscans",
     "name": "Vortex Scans",
     "lang": "en",
