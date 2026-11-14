@@ -81,7 +81,7 @@ extension({
     name: "MangaFire",
     lang: "en",
     kinds: ["manga", "manhwa", "manhua"],
-    version: "1.1.0",
+    version: "1.2.0",
     api: 2,
     content: "mixed",
     site: BASE,
@@ -128,8 +128,9 @@ extension({
     /** @type {Record<string, string>} */
     const credits = {};
     for (const span of doc.querySelectorAll(".title-detail__credits > span")) {
-      const m = span.text().match(/^(Author|Artist)s?\s*(.*)$/s);
-      if (m) credits[m[1].toLowerCase()] = m[2].trim();
+      // The site labels them "Author" and "Art" (once "Artist").
+      const m = span.text().match(/^(Author|Art)(?:ist)?s?\s*(.*)$/s);
+      if (m) credits[m[1] === "Art" ? "artist" : "author"] = m[2].trim();
     }
     const status = doc.querySelector(".badge--status")?.text().toLowerCase() ?? "";
     return {

@@ -122,11 +122,11 @@
       "manhwa",
       "manhua"
     ],
-    "version": "1.1.0",
+    "version": "1.2.0",
     "site": "https://mangafire.to",
     "content": "mixed",
     "script": "mangafire/mangafire.js",
-    "sha256": "db1d92c55f48bb1e4c82efa153b1a2092008730f124edc630b8c559878eeb9ec"
+    "sha256": "d216c10e3cd70da614663c7df21d29cd2c6e62ed41c5468fd985808581074f2b"
   },
   {
     "id": "mangak",
