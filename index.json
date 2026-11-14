@@ -36,11 +36,11 @@
       "manhwa",
       "manhua"
     ],
-    "version": "1.1.0",
+    "version": "1.2.0",
     "site": "https://comix.to",
     "content": "mixed",
     "script": "comix/comix.js",
-    "sha256": "9683f2d9a2bfb8497ff4dfc20f2f367f10bf7e53bdda4e3b4010141aa1a639c6"
+    "sha256": "98ebb5cb08ec4858ad66082fbcdd7a01ad086b7d4fed2302d7a40c63ce111522"
   },
   {
     "id": "demonic-scans",

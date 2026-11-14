@@ -183,7 +183,7 @@ extension({
     name: "Comix",
     lang: "en",
     kinds: ["manga", "manhwa", "manhua"],
-    version: "1.1.0",
+    version: "1.2.0",
     api: 2,
     content: "mixed",
     site: BASE,
@@ -199,12 +199,16 @@ extension({
     /** @type {{ result?: { items: { title: string, url: string, type?: string, poster?: { medium?: string } }[] } }} */
     const data = JSON.parse(text);
     if (!data.result) throw new Error("Comix: the site's answer changed");
-    return data.result.items.map((m) => ({
-      title: m.title,
-      url: BASE + m.url,
-      cover: m.poster?.medium,
-      kind: /** @type {Kind} */ (m.type),
-    }));
+    return data.result.items.map((m) => {
+      // Covers come as site paths ("/images/covers/…") now, sometimes as full URLs.
+      const cover = m.poster?.medium;
+      return {
+        title: m.title,
+        url: BASE + m.url,
+        cover: cover && !/^https?:/.test(cover) ? BASE + cover : cover,
+        kind: /** @type {Kind} */ (m.type),
+      };
+    });
   },
 
   chapters(url) {
