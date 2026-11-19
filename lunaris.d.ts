@@ -132,13 +132,14 @@ interface RenderOptions {
 declare function extension(e: Extension): void;
 
 // Blocks until the response arrives; Cloudflare checks are handled by the
-// app. Throws on network errors, not on error statuses: check status.
+// app. Throws on network errors, not on error statuses: check status. Only the
+// public internet: localhost and local network addresses throw.
 declare function fetch(url: string, options?: FetchOptions): FetchResponse;
 
 // Host API 2. Loads url in a hidden browser window and returns the page's HTML
 // after its scripts ran, or options.script's result. Slow (seconds): use it only
 // when fetch's HTML lacks the content and the site has no usable JSON API.
-// Throws if the page isn't ready in 30s.
+// Throws if the page isn't ready in 30s, or for a localhost or local network URL.
 declare function render(url: string, options?: RenderOptions): string;
 
 declare function html(text: string): Node;
