@@ -40,11 +40,11 @@ function chapterText() {
       if (!area || area.querySelector('[data-testid^="unlock-"]')) return;
       if (/Verifying access/.test(area.textContent ?? "") || !area.querySelector("p")) return;
       observer.disconnect();
-      // The text is watermarked: hidden <div>s of random letters between paragraphs, and
-      // zero-width characters inside them.
+      // The text is watermarked: hidden <div>s of random letters and hidden "Related" links
+      // between paragraphs, and zero-width characters and variation selectors inside them.
       const text = /** @type {Element} */ (area.cloneNode(true));
-      for (const div of text.querySelectorAll(":scope > div")) div.remove();
-      resolve(text.innerHTML.replace(/[​-‍⁠﻿]/g, ""));
+      for (const el of text.querySelectorAll(":scope > div, :scope > a")) el.remove();
+      resolve(text.innerHTML.replace(/[\u200b-\u200d\u2060\ufeff\u{e0100}-\u{e01ef}]/gu, ""));
     };
     const observer = new MutationObserver(check);
     observer.observe(document, { childList: true, subtree: true });
@@ -58,7 +58,7 @@ extension({
     name: "Fenrir Realm",
     lang: "en",
     kinds: ["novel"],
-    version: "1.1.0",
+    version: "1.1.1",
     api: 2,
     content: "sfw",
     site: BASE,
