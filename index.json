@@ -79,11 +79,11 @@
     "kinds": [
       "novel"
     ],
-    "version": "1.1.0",
+    "version": "1.1.1",
     "site": "https://fenrirealm.com",
     "content": "sfw",
     "script": "fenrirealm/fenrirealm.js",
-    "sha256": "47f98db23746441231b6338db52984310158bc462e081806ad927b7d9c9afd05"
+    "sha256": "402a8415d9454858e8d4e9986536e0e999b4f3d07511658f8e79c4fdb59fd4b3"
   },
   {
     "id": "flame-comics",
