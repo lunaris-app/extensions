@@ -40,7 +40,7 @@ extension({
     name: "MangaDex",
     lang: "en",
     kinds: ["manga", "manhwa", "manhua"],
-    version: "1.0.0",
+    version: "1.1.0",
     api: 1,
     content: "mixed",
     site: "https://mangadex.org",
@@ -93,6 +93,7 @@ extension({
         title: `${number}${a.title ? `: ${a.title}` : ""}${group ? ` (${group})` : ""}`,
         url: `${API}/chapter/${c.id}`,
         date: a.publishAt,
+        scanlator: group || undefined,
       };
     });
   },

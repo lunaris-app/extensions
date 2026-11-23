@@ -183,7 +183,7 @@ extension({
     name: "Comix",
     lang: "en",
     kinds: ["manga", "manhwa", "manhua"],
-    version: "1.2.0",
+    version: "1.3.0",
     api: 2,
     content: "mixed",
     site: BASE,
@@ -223,6 +223,7 @@ extension({
           title: `${number}${r.name ? `: ${r.name}` : ""}${r.group ? ` (${r.group})` : ""}`,
           url: BASE + r.href,
           date: fromAgo(r.time),
+          scanlator: r.group || undefined,
         };
       });
   },
