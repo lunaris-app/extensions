@@ -242,11 +242,11 @@
       "manhua",
       "manga"
     ],
-    "version": "1.0.0",
-    "site": "https://www.manhwatoon.me",
+    "version": "1.0.1",
+    "site": "https://www.manhwatoon.com",
     "content": "nsfw",
     "script": "manhwatoon/manhwatoon.js",
-    "sha256": "31adca8618cd1b36f8d9ac5bbcb7c6025116858098073c2bdafbf00aa5c8c2ee"
+    "sha256": "92d3f787c1cd94e16399b522b76bc3da0e61137145369754a00a63270d3d3034"
   },
   {
     "id": "niyaniya",
