@@ -21,7 +21,7 @@ the project. Lunaris lists it under **Extensions > Available**, so there's nothi
 | Mangak             | [mangak.io](https://mangak.io)                         | manga, manhwa, manhua | Some adult titles                                                                                   |
 | Mangakakalot       | [mangakakalot.art](https://www.mangakakalot.art)       | manga, manhwa, manhua | Same platform as MangaNato                                                                          |
 | MangaNato          | [manganato.gg](https://www.manganato.gg)               | manga, manhwa, manhua | Search may show a Cloudflare check; search returns one page of results                              |
-| ManhwaToon         | [manhwatoon.me](https://www.manhwatoon.me)             | manhwa, manhua, manga | Adult; pages use `render` (API 2): plain requests get decoy images                                  |
+| ManhwaToon         | [manhwatoon.com](https://www.manhwatoon.com)           | manhwa, manhua, manga | Adult; pages use `render` (API 2): plain requests get decoy images                                  |
 | NiyaNiya           | [niyaniya.moe](https://niyaniya.moe)                   | manga                 | Adult                                                                                               |
 | Omega Scans        | [omegascans.org](https://omegascans.org)               | manhwa                | Adult; comics only; paid chapters are left out                                                      |
 | Paradise Scans     | [paradisescans.com](https://paradisescans.com)         | manhwa, novel         | BL; some adult titles; premium chapters are left out                                                |

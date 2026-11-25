@@ -2,7 +2,7 @@
 // ManhwaToon, a WordPress site on the Madara theme. Lists and chapters come from its
 // HTML; the reader sends plain requests decoy images, so pages go through render().
 
-const BASE = "https://www.manhwatoon.me";
+const BASE = "https://www.manhwatoon.com";
 
 /** @param {string} url @param {FetchOptions} [options] */
 function get(url, options) {
@@ -52,7 +52,7 @@ extension({
     name: "ManhwaToon",
     lang: "en",
     kinds: ["manhwa", "manhua", "manga"],
-    version: "1.0.0",
+    version: "1.0.1",
     api: 2,
     content: "nsfw",
     site: BASE,

@@ -242,11 +242,11 @@
       "manhua",
       "manga"
     ],
-    "version": "1.0.0",
-    "site": "https://www.manhwatoon.me",
+    "version": "1.0.1",
+    "site": "https://www.manhwatoon.com",
     "content": "nsfw",
     "script": "manhwatoon/manhwatoon.js",
-    "sha256": "31adca8618cd1b36f8d9ac5bbcb7c6025116858098073c2bdafbf00aa5c8c2ee"
+    "sha256": "92d3f787c1cd94e16399b522b76bc3da0e61137145369754a00a63270d3d3034"
   },
   {
     "id": "niyaniya",
@@ -282,11 +282,11 @@
       "manhwa",
       "novel"
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "site": "https://paradisescans.com",
     "content": "mixed",
     "script": "paradisescans/paradisescans.js",
-    "sha256": "2b77e7ca5f39b8005c3dab44b24a98fea9e5cef741aa5b8aeb0ff537bd241eab"
+    "sha256": "a45b2898c33af8cd8d076913b6a36754bca880b0db095a4bccd4c135789a1d99"
   },
   {
     "id": "vortexscans",
