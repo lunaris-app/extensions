@@ -36,7 +36,7 @@ extension({
     name: "Paradise Scans",
     lang: "en",
     kinds: ["manhwa", "novel"],
-    version: "1.0.0",
+    version: "1.0.1",
     api: 1,
     content: "mixed",
     site: BASE,
@@ -101,7 +101,8 @@ extension({
       throw new Error(
         `Paradise Scans: ${c.locked ? "this chapter is locked" : "this chapter has no pages"}`,
       );
-    return images;
+    // Imported chapters come as site paths.
+    return images.map((src) => (/^https?:/.test(src) ? src : BASE + src));
   },
 
   text(url) {

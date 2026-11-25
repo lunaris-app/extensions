@@ -282,11 +282,11 @@
       "manhwa",
       "novel"
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "site": "https://paradisescans.com",
     "content": "mixed",
     "script": "paradisescans/paradisescans.js",
-    "sha256": "2b77e7ca5f39b8005c3dab44b24a98fea9e5cef741aa5b8aeb0ff537bd241eab"
+    "sha256": "a45b2898c33af8cd8d076913b6a36754bca880b0db095a4bccd4c135789a1d99"
   },
   {
     "id": "vortexscans",
